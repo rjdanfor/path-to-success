@@ -1,0 +1,118 @@
+/* ------------------------- CSS by RJ -------------------------------------- */
+/* -------------------- IMPORTED FONTS -------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kavoon&display=swap');
+/*-------------------- CSS RESET ---------------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* -------------------- ROOT VARIABLES -------------------------------------- */
+:root {
+    --teal: #4ca7c0;
+    --purple: #484fb7;
+    --lavender: #6b8fe7;
+    --yellow: #e9bb57;
+    --pink: #d9526f;
+    --dark-grey: #1e1e1e;
+    --white: #ffffff;
+
+    --fonts: 'Inter';
+    --title-fonts: 'Kavoon';
+}
+/* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
+@media screen and (min-width:450px) {
+    h1{font-size: 3em;}
+    nav h2{font-size: 1.5em;}
+    h2{font-size: 2em;}
+    h1,h2{font-family: var(--title-fonts); color: var(--white);}
+    h3{font-size: 1.5em;}
+    h4{font-size: 1.15em;}
+    h3, h4, p, th, td, a{font-family: var(--fonts);}
+
+    body{
+        background-color: var(--lavender);
+    }
+    header{
+        background-color: var(--teal);
+        text-align: center;
+    }
+    header p{
+        background-color: var(--pink);
+        color: var(--white);
+    }
+    header p::before{
+        content: "Unlock your full potential";
+    }
+    nav{
+        position: fixed;
+        background-color: var(--yellow);
+    }
+    main{
+
+    }
+    footer{
+        background-color: var(--teal);
+    }
+    footer p, footer a{
+        color: var(--white);
+    }
+    a:hover{
+        color: var(--yellow);
+    }
+}
+/*-------------------- MEDIA QUERY (medium) ----------------------------------*/
+@media screen and (min-width:620px) {
+    
+}
+/*-------------------- MEDIA QUERY (large) -----------------------------------*/
+@media screen and (min-width:950px) {
+    
+}
+/*-------------------- MEDIA QUERY (xl) --------------------------------------*/
+@media screen and (min-width:1280px) {
+    
+}
