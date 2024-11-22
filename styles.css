@@ -65,37 +65,152 @@ table {
 }
 /* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
 @media screen and (min-width:450px) {
-    h1{font-size: 3em;}
-    nav h2{font-size: 1.5em;}
+    h1{font-size: 3em; top: 20px;}
+    nav h2{font-size: 1.5em; color: var(--dark-grey);}
     h2{font-size: 2em;}
     h1,h2{font-family: var(--title-fonts); color: var(--white);}
-    h3{font-size: 1.5em;}
-    h4{font-size: 1.15em;}
-    h3, h4, p, th, td, a{font-family: var(--fonts);}
+    h3, h4, p, th, td, a{font-family: var(--fonts);}    
+    h3{font-size: 1.5em; font-weight: bold;}
+    h4{font-size: 1.15em; font-weight: bold}
 
+    html{
+        background-color: var(--purple);
+    }
     body{
-        background-color: var(--lavender);
+        margin: 0 auto;
+        display: grid;
+        grid-template-areas: 
+        "nav"
+        "header"
+        "main"
+        "footer";
     }
     header{
-        background-color: var(--teal);
+        grid-area: header;
+        background-color: var(--lavender);
         text-align: center;
+        padding-top: 40px;
     }
     header p{
         background-color: var(--pink);
         color: var(--white);
     }
-    header p::before{
-        content: "Unlock your full potential";
+    #long_subtitle{
+        display: none;
     }
     nav{
+        grid-area: nav;
         position: fixed;
         background-color: var(--yellow);
+        padding: 5px;
+        border-radius: 0 0 0 20%;
+        justify-self: right;
+    }
+    nav ul{
+        display: none;
+    }
+    nav a{
+        text-decoration: none;
+        color: var(--dark-grey);
     }
     main{
-
+        grid-area: main;
+        display: grid;
+    }
+    main > section{
+        padding: 10px;
+    }
+    #services{
+        display: grid;
+    }
+    #services > section > section{
+        background-color: var(--white);
+        border-radius: 20px;
+        padding: 5%;
+        margin: 5%;
+    }
+    #services h3{
+        color: var(--yellow);
+    }
+    #services h4{
+        color: var(--purple);
+    }
+    #services p{
+        margin-top: 2%;
+    }
+    #why-us {
+        background-color: var(--pink);
+    }
+    #WCU-title{
+        margin-bottom: 7px;
+    }
+    #why-us ul{
+        columns: 2;
+    }
+    #why-us p{
+        font-weight: bold;
+        margin-bottom: 2%;
+        padding: 10%;
+        border-radius: 5%;
+    }
+    #PA{background-color: var(--teal);}
+    #PR{background-color: var(--lavender);}
+    #SE{background-color: var(--yellow);}
+    #FO{background-color: var(--white);}
+    #first-steps{
+        background-color: var(--pink);
+    }
+    #pricing h3{
+        color: var(--yellow);
+        text-align: left;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        place-items: center;
+    }
+    table{
+        background-color: var(--yellow);
+        padding: 10%;
+        margin: 1em auto;
+    }
+    td{
+        background-color: var(--white);
+    }
+    td,th{
+        padding: 20px;
+        font-weight: bold;
+    }
+    #first-steps{
+        color: var(--white);
+    }
+    #first-steps p{
+        margin: 5px;
+    }
+    #first-steps a{
+        padding: 1em 3em;
+        background-color: var(--white);
+        color: var(--dark-grey);
+        text-align: center;
+        max-width: 8em;
+        border-radius: 12px;
+        box-shadow: var(--dark-grey) 5px 5px;
+        margin: 0 auto;
+    }
+    .container2{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
     }
     footer{
-        background-color: var(--teal);
+        grid-area: footer;
+        display: flex;
+        justify-content: space-around;
+        padding: 12px;
+        background-color: var(--lavender);
+        text-align: center;
+        border-radius: 0 0 20px 20px;
     }
     footer p, footer a{
         color: var(--white);
@@ -103,16 +218,49 @@ table {
     a:hover{
         color: var(--yellow);
     }
+    nav a:hover{
+        color: var(--white);
+    }
 }
 /*-------------------- MEDIA QUERY (medium) ----------------------------------*/
 @media screen and (min-width:620px) {
-    
+    #short_subtitle{
+        display: none;
+    }
+    #long_subtitle{
+        display: block;
+    }
+    #why-us ul{
+        columns: 4;
+    }
+    .container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
 }
 /*-------------------- MEDIA QUERY (large) -----------------------------------*/
 @media screen and (min-width:950px) {
-    
+    nav h2{
+        display: none;
+    }
+    nav ul{
+        display: block;
+        columns: 4;
+        font-weight: bold;
+        text-align: center;
+    }
+    .container{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+    }
+    .container2{ 
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr;
+    }
 }
 /*-------------------- MEDIA QUERY (xl) --------------------------------------*/
 @media screen and (min-width:1280px) {
-    
+    body{
+        max-width: 1280px;
+    }
 }
