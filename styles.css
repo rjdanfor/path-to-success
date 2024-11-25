@@ -90,10 +90,14 @@ table {
         background-color: var(--lavender);
         text-align: center;
         padding-top: 40px;
+        border-radius: 0 0 40px 40px;
     }
     header p{
         background-color: var(--pink);
         color: var(--white);
+        width: 99%;
+        margin: 0 auto;
+        border-radius: 0 0 15px 15px;
     }
     #long_subtitle{
         display: none;
@@ -103,7 +107,7 @@ table {
         position: fixed;
         background-color: var(--yellow);
         padding: 5px;
-        border-radius: 0 0 0 20%;
+        border-radius: 0 0 15px 15px;
         justify-self: right;
     }
     nav ul{
@@ -123,7 +127,7 @@ table {
     #services{
         display: grid;
     }
-    #services > section > section{
+    #services > div > section > div > section{
         background-color: var(--white);
         border-radius: 20px;
         padding: 5%;
@@ -137,6 +141,10 @@ table {
     }
     #services p{
         margin-top: 2%;
+    }
+    .main-grid{
+        display: grid;
+        grid-template-columns: 1fr;
     }
     #why-us {
         background-color: var(--pink);
@@ -152,6 +160,8 @@ table {
         margin-bottom: 2%;
         padding: 10%;
         border-radius: 5%;
+        min-height: 2em;
+        text-align: center;
     }
     #PA{background-color: var(--teal);}
     #PR{background-color: var(--lavender);}
@@ -177,6 +187,7 @@ table {
     }
     td{
         background-color: var(--white);
+        border: var(--yellow) 5px solid;
     }
     td,th{
         padding: 20px;
@@ -196,7 +207,8 @@ table {
         max-width: 8em;
         border-radius: 12px;
         box-shadow: var(--dark-grey) 5px 5px;
-        margin: 0 auto;
+        margin: auto;
+        font-weight: bold;
     }
     .container2{
         display: grid;
@@ -230,6 +242,17 @@ table {
     #long_subtitle{
         display: block;
     }
+    .main-grid{
+        grid-template-columns: 1fr;
+    }
+    .one-on-one-grid, .group-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #services > div > section > div > #relationship-coaching, #services > div > section > .work-and-online-grid > section{
+        grid-column: 1/3;
+        margin: 2.5%;
+    }
     #why-us ul{
         columns: 4;
     }
@@ -248,6 +271,18 @@ table {
         columns: 4;
         font-weight: bold;
         text-align: center;
+    }
+    #services h3{
+        text-align: center;
+    }
+    .main-grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .one-on-one-grid, .group-grid, .work-and-online-grid{
+        display: block;
+    }
+    #services > div > section > div > #relationship-coaching, #services > div > section > .work-and-online-grid > section{
+        margin: 5%;
     }
     .container{
         grid-template-columns: repeat(4, 1fr);
